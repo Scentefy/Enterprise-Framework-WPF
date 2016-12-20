@@ -1,0 +1,4 @@
+right click firstfloor.modernUI.App.
+set as startup project.
+Press start..
+Might need vs 2013

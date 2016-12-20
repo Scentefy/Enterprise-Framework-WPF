@@ -8,10 +8,10 @@
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
             <StackPanel MinWidth="200">
-                <TextBlock Text="Login" Style="{StaticResource Heading2}" Margin="0,0,0,8"/>
-                <TextBox Text="textbox" Margin="0,0,0,8"/>
-                <PasswordBox Password="12345" Margin="0,0,0,32" Height="26" RenderTransformOrigin="5.5,5.462"/>
-                <Button Content="Login" Margin="0,0,0,8" />
+                <TextBlock Text="Login" Style="{StaticResource Heading2}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <TextBox Text="textbox" Margin="0,0,0,8" Width="149"/>
+                <PasswordBox Password="12345" Margin="0,0,0,32" Height="26" RenderTransformOrigin="5.5,5.462" Width="153"/>
+                <Button Content="Login" Margin="0,0,0,8" Width="123" />
             </StackPanel>
         </ScrollViewer>
     </Grid>
