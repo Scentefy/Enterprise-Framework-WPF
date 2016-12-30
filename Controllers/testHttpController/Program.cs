@@ -52,7 +52,20 @@ namespace testHttpController
             Console.WriteLine("Printing out Request.....");
             Console.WriteLine(r.Jsonify());
 
-            
+            // Run a network test request
+            Networking n = new Controller.Networking();
+            Console.WriteLine("Running Network Request");
+            Networking.apiEndPoint = "https://x4nikw1tvc.execute-api.us-east-1.amazonaws.com/prod";
+            Task<string> result = null;
+            try
+            {
+                result =  n.GetResponseString(r);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            Console.WriteLine(result.Result);
         }
 
     }

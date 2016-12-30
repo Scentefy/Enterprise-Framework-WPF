@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AWSTransactions.cs" />
     <Compile Include="Controller\Networking.cs" />
     <Compile Include="Model\Request.cs" />
     <Compile Include="Product.cs" />

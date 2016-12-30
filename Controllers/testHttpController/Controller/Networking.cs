@@ -1,35 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using testHttpController.Model;
 
 namespace testHttpController.Controller
 {
-    public static class Networking
+    public class Networking
     {
         private static string _apiEndPoint = "https://zz3az7p8rc.execute-api.us-east-1.amazonaws.com/prod";
-        //string requestBody = @"{\"request\" : \"get_records\", \"table_name\" : \"USER_TABLE\", \"parameters\" : {}}";
+        public static string _responseString = "";
+        public string requestBody = "{\"request\" : \"get_records\", \"table_name\" : \"USER_TABLE\", \"parameters\" : {}}";
 
-
-        /// <summary>
-        /// This function posts a json string given to it with a 
-        /// predefined api url which is set
-        /// </summary>
-        public static async Task<String> postRequest(Request request)
+        public async Task<string> GetResponseString(Request request)
         {
-            using (var client = new HttpClient())
-            {
-                // Create the RequestBody
-                StringContent requestBody = new StringContent(request.Jsonify(), 
-                    System.Text.UTF8Encoding.UTF8, "application/json");
-                // Send the Async Request
-                var response = await client.PostAsync(_apiEndPoint, requestBody);
-                // Extract the response body
-                return await response.Content.ReadAsStringAsync();
-            }
+            var httpClient = new HttpClient();
+
+            // Create the RequestBody
+            StringContent requestBody = new StringContent("{\"request\" : \"get_records\", \"table_name\" : \"USER_TABLE\", \"parameters\" : {}}",
+                System.Text.UTF8Encoding.UTF8, "application/json");
+            var response = await httpClient.PostAsync(_apiEndPoint, requestBody);
+            var contents = await response.Content.ReadAsStringAsync();
+
+            return contents;
         }
 
         /// <summary>
