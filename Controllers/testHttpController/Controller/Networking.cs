@@ -9,18 +9,15 @@ namespace testHttpController.Controller
     {
         private static string _apiEndPoint = "https://zz3az7p8rc.execute-api.us-east-1.amazonaws.com/prod";
         public static string _responseString = "";
-        public string requestBody = "{\"request\" : \"get_records\", \"table_name\" : \"USER_TABLE\", \"parameters\" : {}}";
-
+        public string testRequestBodyString = "{\"request\" : \"get_records\", \"table_name\" : \"USER_TABLE\", \"parameters\" : {}}";
         public async Task<string> GetResponseString(Request request)
         {
             var httpClient = new HttpClient();
-
             // Create the RequestBody
-            StringContent requestBody = new StringContent("{\"request\" : \"get_records\", \"table_name\" : \"USER_TABLE\", \"parameters\" : {}}",
+            StringContent requestBody = new StringContent(request.Jsonify(),
                 System.Text.UTF8Encoding.UTF8, "application/json");
             var response = await httpClient.PostAsync(_apiEndPoint, requestBody);
             var contents = await response.Content.ReadAsStringAsync();
-
             return contents;
         }
 
@@ -36,6 +33,8 @@ namespace testHttpController.Controller
                 _apiEndPoint = value;
             }
         }
+
+
 
         
 

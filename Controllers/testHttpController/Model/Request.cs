@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Dynamic;
 using Newtonsoft.Json;
+using System.Net.Http;
+using testHttpController.Controller;
 
 namespace testHttpController.Model
 {
@@ -30,17 +32,12 @@ namespace testHttpController.Model
         public string Jsonify()
         {
             dynamic json = new ExpandoObject();
-            json.request_type = _requestType;
+            json.request = _requestType;
             json.table_name = _tableName;
             json.parameters = _parameters;
             // Return Json String
             return JsonConvert.SerializeObject(json);
         }
-
-
-
-
-
     }
 
 

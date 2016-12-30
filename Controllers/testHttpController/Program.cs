@@ -42,13 +42,13 @@ namespace testHttpController
             // Testing request
 
             var parameters = new OrderedDictionary();
-            parameters.Add("FName", "nigga");
-            parameters.Add("LName", "nigga");
-            parameters.Add("Password", "nigga");
-            parameters.Add("Email", "nigga");
-            parameters.Add("RoleID", "nigga");
+            //parameters.Add("FName", "nigga");
+            //parameters.Add("LName", "nigga");
+            //parameters.Add("Password", "nigga");
+            //parameters.Add("Email", "nigga");
+            //parameters.Add("RoleID", "nigga");
 
-            Request r = new Request("put_record", parameters, "USER_TABLE");
+            Request r = new Request("get_records", parameters, "USER_TABLE");
             Console.WriteLine("Printing out Request.....");
             Console.WriteLine(r.Jsonify());
 
