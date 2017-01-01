@@ -1,0 +1,12 @@
+﻿<Window x:Class="Enterprise_Front_End.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Enterprise_Front_End"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1200">
+
+        <Frame x:Name="content_frame" Source="Login.xaml" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+
+</Window>
