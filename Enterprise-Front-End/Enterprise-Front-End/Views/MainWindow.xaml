@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1200">
 
-        <Frame x:Name="content_frame" Source="Login.xaml" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Frame x:Name="content_frame" Source="Login.xaml" HorizontalAlignment="Center" HorizontalContentAlignment="Center" NavigationUIVisibility="Hidden"/>
 
 </Window>

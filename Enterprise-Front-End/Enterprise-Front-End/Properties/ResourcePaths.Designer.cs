@@ -22,7 +22,7 @@ namespace Enterprise_Front_End.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ResourcePaths {
+    public class ResourcePaths {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Enterprise_Front_End.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Enterprise_Front_End.Properties.ResourcePaths", typeof(ResourcePaths).Assembly);
@@ -51,7 +51,7 @@ namespace Enterprise_Front_End.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Controllers.
         /// </summary>
-        internal static string FolderController {
+        public static string FolderController {
             get {
                 return ResourceManager.GetString("FolderController", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Models.
         /// </summary>
-        internal static string FolderModel {
+        public static string FolderModel {
             get {
                 return ResourceManager.GetString("FolderModel", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Views.
         /// </summary>
-        internal static string FolderView {
+        public static string FolderView {
             get {
                 return ResourceManager.GetString("FolderView", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /NCRDetailsFrame.
         /// </summary>
-        internal static string FrameNCRDetails {
+        public static string FrameNCRDetails {
             get {
                 return ResourceManager.GetString("FrameNCRDetails", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /NCRListFrame.
         /// </summary>
-        internal static string FrameNCRList {
+        public static string FrameNCRList {
             get {
                 return ResourceManager.GetString("FrameNCRList", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /NCRNav.
         /// </summary>
-        internal static string FrameNCRNav {
+        public static string FrameNCRNav {
             get {
                 return ResourceManager.GetString("FrameNCRNav", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /NCRSearchbarFrame.
         /// </summary>
-        internal static string FrameNCRSearchbar {
+        public static string FrameNCRSearchbar {
             get {
                 return ResourceManager.GetString("FrameNCRSearchbar", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /DashboardPage.xaml.
         /// </summary>
-        internal static string PageDash {
+        public static string PageDash {
             get {
                 return ResourceManager.GetString("PageDash", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /DashboardPage.
         /// </summary>
-        internal static string PageDashboard {
+        public static string PageDashboard {
             get {
                 return ResourceManager.GetString("PageDashboard", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /Login.xaml.
         /// </summary>
-        internal static string PageLogin {
+        public static string PageLogin {
             get {
                 return ResourceManager.GetString("PageLogin", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /MainPage.xaml.
         /// </summary>
-        internal static string PageMain {
+        public static string PageMain {
             get {
                 return ResourceManager.GetString("PageMain", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Enterprise_Front_End.Properties {
         /// <summary>
         ///   Looks up a localized string similar to /NCRPage.xaml.
         /// </summary>
-        internal static string PageNCR {
+        public static string PageNCR {
             get {
                 return ResourceManager.GetString("PageNCR", resourceCulture);
             }
