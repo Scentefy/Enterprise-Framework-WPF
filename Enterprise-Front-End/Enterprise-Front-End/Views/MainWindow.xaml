@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1200">
 
-        <Frame x:Name="content_frame" Source="Login.xaml" HorizontalAlignment="Center" HorizontalContentAlignment="Center" NavigationUIVisibility="Hidden"/>
+       
+
+
+    <Grid Margin="0,0,-3,0">
+        <Grid.ColumnDefinitions>
+            <!--Main Column-->
+            <ColumnDefinition Name="main_column" Width="100*">
+
+            </ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Frame x:Name="content_frame" Source="Login.xaml" HorizontalContentAlignment="Center" NavigationUIVisibility="Hidden" Height="auto"  Width="auto"/>
+
+    </Grid>
+
 
 </Window>

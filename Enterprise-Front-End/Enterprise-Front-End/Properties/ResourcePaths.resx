@@ -120,6 +120,9 @@
   <data name="FolderController" xml:space="preserve">
     <value>Controllers</value>
   </data>
+  <data name="FolderLayout" xml:space="preserve">
+    <value>Views/Layouts</value>
+  </data>
   <data name="FolderModel" xml:space="preserve">
     <value>Models</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="FrameNCRSearchbar" xml:space="preserve">
     <value>/NCRSearchbarFrame</value>
+  </data>
+  <data name="LayoutBase" xml:space="preserve">
+    <value>/LayoutBase.xaml</value>
   </data>
   <data name="PageDash" xml:space="preserve">
     <value>/DashboardPage.xaml</value>

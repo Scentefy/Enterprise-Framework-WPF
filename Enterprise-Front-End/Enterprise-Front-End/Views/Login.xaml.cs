@@ -31,7 +31,7 @@ namespace Enterprise_Front_End
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri(ResourcePaths.FolderView+ResourcePaths.PageDash, UriKind.Relative));
+            NavigationService.Navigate(new Uri(ResourcePaths.FolderLayout+ResourcePaths.LayoutBase, UriKind.Relative));
         }
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)

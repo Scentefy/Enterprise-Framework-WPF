@@ -70,6 +70,15 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Views/Layouts.
+        /// </summary>
+        public static string FolderLayout {
+            get {
+                return ResourceManager.GetString("FolderLayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Models.
         /// </summary>
         public static string FolderModel {
@@ -120,6 +129,15 @@ namespace Enterprise_Front_End.Properties {
         public static string FrameNCRSearchbar {
             get {
                 return ResourceManager.GetString("FrameNCRSearchbar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /LayoutBase.xaml.
+        /// </summary>
+        public static string LayoutBase {
+            get {
+                return ResourceManager.GetString("LayoutBase", resourceCulture);
             }
         }
         
