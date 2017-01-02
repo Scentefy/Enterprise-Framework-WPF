@@ -35,5 +35,25 @@ namespace Enterprise_Front_End
             NavigationService.Navigate(new Uri(ResourcePaths.FolderView+ResourcePaths.PageDash, UriKind.Relative));
             //this.Visibility = Visibility.Hidden;
         }
+
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
+
+        public void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            PasswordBox tb = (PasswordBox)sender;
+            tb.Password = string.Empty;
+            tb.GotFocus -= PasswordBox_GotFocus;
+        }
+
+        private void Hyperlink_RequestNavigate(object sender,
+                                       System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.msn.com");
+        }
     }
 }
