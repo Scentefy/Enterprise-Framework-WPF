@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Enterprise_Front_End"
+      xmlns:view="clr-namespace:Enterprise_Front_End.Views"
       mc:Ignorable="d" 
       d:DesignHeight="300"
       HorizontalAlignment="Center"
@@ -14,6 +15,12 @@
         <PasswordBox x:Name="password_box" HorizontalAlignment="Center" Margin="90,154,0,0" VerticalAlignment="Top" Width="120" ToolTip="Password" Height="23"/>
         <Label x:Name="login_label" Content="Sign in" HorizontalAlignment="Center" Margin="127,71,0,0" VerticalAlignment="Top"/>
         <Button x:Name="sign_in_button" Content="Sign In" HorizontalAlignment="Center" Margin="90,196,0,0" VerticalAlignment="Top" Width="120" Click="button_Click"/>
-
+        <!--uncomment the bellow code for progressbar example-->
+        <!--<view:CircularProgressBar x:Name="progressBar"
+                             DockPanel.Dock="Left"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Top"
+                             Height="45"
+                             Margin="18,10" />-->
     </Grid>
 </Page>

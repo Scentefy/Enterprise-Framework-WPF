@@ -33,7 +33,8 @@ namespace Enterprise_Front_End
         private void button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri(ResourcePaths.FolderView+ResourcePaths.PageDash, UriKind.Relative));
-            //this.Visibility = Visibility.Hidden;
         }
+
+
     }
 }
