@@ -6,15 +6,24 @@
       xmlns:local="clr-namespace:Enterprise_Front_End"
       xmlns:view="clr-namespace:Enterprise_Front_End.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="300"
+      d:DesignHeight="480"
       HorizontalAlignment="Center"
-      Title="Page3" Width="336.393">
+      Title="Page3" Width="555.098">
 
     <Grid>
-        <TextBox x:Name="username_box" HorizontalAlignment="Center" Height="23" Margin="90,126,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top"  Width="120"/>
-        <PasswordBox x:Name="password_box" HorizontalAlignment="Center" Margin="90,154,0,0" VerticalAlignment="Top" Width="120" ToolTip="Password" Height="23"/>
-        <Label x:Name="login_label" Content="Sign in" HorizontalAlignment="Center" Margin="127,71,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="sign_in_button" Content="Sign In" HorizontalAlignment="Center" Margin="90,196,0,0" VerticalAlignment="Top" Width="120" Click="button_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="username_box" HorizontalAlignment="Center" Height="28" Margin="62,206,60,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top"  Width="208" GotFocus="TextBox_GotFocus" TextDecorations="{x:Null}" Cursor="Hand"/>
+        <PasswordBox x:Name="password_box" HorizontalAlignment="Center" Margin="62,241,60,0" VerticalAlignment="Top" Width="208" ToolTip="Password" Height="29" Password="meow" GotFocus="PasswordBox_GotFocus" Cursor="Hand" />
+        <Label x:Name="login_label" Content="Sign in" HorizontalAlignment="Center" Margin="245,134,236,0" VerticalAlignment="Top" Height="33" Width="64"/>
+        <Button x:Name="sign_in_button" Content="Sign In" HorizontalAlignment="Center" Margin="62,285,60,0" VerticalAlignment="Top" Width="208" Click="button_Click" Cursor="Hand" Height="25"/>
+        <Label x:Name="subtitle_label" Content="Input username and password provided" HorizontalAlignment="Left" Margin="170,167,0,0" VerticalAlignment="Top" FontSize="10" Width="262" Height="29"/>
+        <TextBlock x:Name="Hyperlink" Margin="262,341,0,120" HorizontalAlignment="Left" Width="35" RenderTransformOrigin="0.429,0.526">
+    <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" 
+               NavigateUri="http://www.msn.com">MSN</Hyperlink>
+        </TextBlock>
         <!--uncomment the bellow code for progressbar example-->
         <!--<view:CircularProgressBar x:Name="progressBar"
                              DockPanel.Dock="Left"
