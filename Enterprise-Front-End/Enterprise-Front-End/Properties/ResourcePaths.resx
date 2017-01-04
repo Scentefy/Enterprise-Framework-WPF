@@ -151,7 +151,7 @@
     <value>/DashboardPage</value>
   </data>
   <data name="PageLogin" xml:space="preserve">
-    <value>/Login.xaml</value>
+    <value>pack://application:,,,/Views/Pages/Login/Login.xaml</value>
   </data>
   <data name="PageMain" xml:space="preserve">
     <value>/MainPage.xaml</value>

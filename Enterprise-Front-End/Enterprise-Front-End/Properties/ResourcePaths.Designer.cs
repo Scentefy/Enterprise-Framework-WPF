@@ -160,7 +160,7 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /Login.xaml.
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Pages/Login/Login.xaml.
         /// </summary>
         public static string PageLogin {
             get {

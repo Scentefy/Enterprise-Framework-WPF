@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Enterprise_Front_End"
+        xmlns:resx="clr-namespace:Enterprise_Front_End.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1200">
 
@@ -19,7 +20,9 @@
 
         </Grid.ColumnDefinitions>
 
-        <Frame x:Name="content_frame" Source="Login.xaml" HorizontalContentAlignment="Center" NavigationUIVisibility="Hidden" Height="auto"  Width="auto"/>
+        
+
+            <Frame x:Name="content_frame" Source="{Binding Source={ x:Static resx:ResourcePaths.PageLogin}}" HorizontalContentAlignment="Center" NavigationUIVisibility="Hidden" Height="auto"  Width="auto"/>
 
     </Grid>
 
