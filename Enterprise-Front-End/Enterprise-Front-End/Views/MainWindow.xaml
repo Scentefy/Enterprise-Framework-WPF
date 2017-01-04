@@ -20,8 +20,6 @@
 
         </Grid.ColumnDefinitions>
 
-        
-
             <Frame x:Name="content_frame" Source="{Binding Source={ x:Static resx:ResourcePaths.PageLogin}}" HorizontalContentAlignment="Center" NavigationUIVisibility="Hidden" Height="auto"  Width="auto"/>
 
     </Grid>

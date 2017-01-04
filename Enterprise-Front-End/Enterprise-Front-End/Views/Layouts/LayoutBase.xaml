@@ -4,10 +4,10 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Enterprise_Front_End.Views.Layouts"
+      xmlns:resx="clr-namespace:Enterprise_Front_End.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="300"
-      Title="LayoutBase" Height="720" Width="1080"
-      Background="Aqua">
+      Title="LayoutBase" Height="720" Width="1080">
 
     <Grid Margin="0,0,-3,0">
         <Grid.ColumnDefinitions>
@@ -22,9 +22,11 @@
 
         </Grid.ColumnDefinitions>
 
-        <Frame x:Name="navigation_frame" Content="nav" Height="auto" Width="{Binding ElementName=navigation_column, Path=ActualWidth}" Grid.Column="0"/>
-        <Frame x:Name="content_frame" Content="Content" Height="auto" Grid.Column="1" Width="{Binding ElementName=content_column, Path=ActualWidth}" Grid.Row="1"/>
-        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="109.333,236,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Frame x:Name="navigation_frame" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageNav}}" 
+               Background="Green" Content="nav" Height="auto" Width="{Binding ElementName=navigation_column, Path=ActualWidth}" Grid.Column="0"/>
+        
+        <Frame x:Name="content_frame" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageLogin}}" 
+               Background="Red" Content="Content" Height="auto" Grid.Column="1" Width="{Binding ElementName=content_column, Path=ActualWidth}" Grid.Row="1"/>
 
 
 

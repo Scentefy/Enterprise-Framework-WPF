@@ -156,6 +156,9 @@
   <data name="PageMain" xml:space="preserve">
     <value>/MainPage.xaml</value>
   </data>
+  <data name="PageNav" xml:space="preserve">
+    <value>pack://application:,,,/Views/Pages/Navigation/PageNav.xaml</value>
+  </data>
   <data name="PageNCR" xml:space="preserve">
     <value>/NCRPage.xaml</value>
   </data>

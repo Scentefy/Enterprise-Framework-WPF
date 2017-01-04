@@ -178,6 +178,15 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Pages/Navigation/PageNav.xaml.
+        /// </summary>
+        public static string PageNav {
+            get {
+                return ResourceManager.GetString("PageNav", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /NCRPage.xaml.
         /// </summary>
         public static string PageNCR {

@@ -65,10 +65,10 @@
     <Compile Include="Views\CircularProgressBar.xaml.cs">
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\DashboardPage.xaml.cs">
+    <Compile Include="Views\Pages\Dashboard\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\PageNav.xaml.cs">
+    <Compile Include="Views\Pages\Navigation\PageNav.xaml.cs">
       <DependentUpon>PageNav.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\CircularProgressBar.xaml">
@@ -112,11 +112,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\DashboardPage.xaml">
+    <Page Include="Views\Pages\Dashboard\DashboardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\PageNav.xaml">
+    <Page Include="Views\Pages\Navigation\PageNav.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,9 +162,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Pages\Dashboard\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

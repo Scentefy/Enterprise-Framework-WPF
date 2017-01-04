@@ -23,6 +23,7 @@ namespace Enterprise_Front_End.Views
         public PageNav()
         {
             InitializeComponent();
+            Console.WriteLine("Navigation Created");
         }
     }
 }
