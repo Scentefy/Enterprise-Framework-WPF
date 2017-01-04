@@ -23,10 +23,9 @@
         </Grid.ColumnDefinitions>
 
         <Frame x:Name="navigation_frame" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageNav}}" 
-               Background="Green" Content="nav" Height="auto" Width="{Binding ElementName=navigation_column, Path=ActualWidth}" Grid.Column="0"/>
-        
-        <Frame x:Name="content_frame" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageLogin}}" 
-               Background="Red" Content="Content" Height="auto" Grid.Column="1" Width="{Binding ElementName=content_column, Path=ActualWidth}" Grid.Row="1"/>
+               Background="Green" Grid.Column="0"/>
+
+        <Frame x:Name="content_frame" Background="Red" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageLogin}}" Grid.Column="1" />
 
 
 
