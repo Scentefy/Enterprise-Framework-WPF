@@ -142,7 +142,7 @@
     <value>/NCRSearchbarFrame</value>
   </data>
   <data name="LayoutBase" xml:space="preserve">
-    <value>/LayoutBase.xaml</value>
+    <value>pack://application:,,,/Views/Layouts/LayoutBase.xaml</value>
   </data>
   <data name="PageDash" xml:space="preserve">
     <value>/DashboardPage.xaml</value>
@@ -161,5 +161,8 @@
   </data>
   <data name="PageNCR" xml:space="preserve">
     <value>pack://application:,,,/Views/Pages/NCR/NCRPage.xaml</value>
+  </data>
+  <data name="AddLayoutBase" xml:space="preserve">
+    <value>Enterprise_Front_End.Views.Layouts.LayoutBase</value>
   </data>
 </root>

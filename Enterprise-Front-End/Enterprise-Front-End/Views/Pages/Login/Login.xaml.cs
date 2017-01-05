@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Enterprise_Front_End.Properties;
 using Enterprise_Front_End.Views.Layouts;
+using Enterprise_Front_End.Controllers.ViewControllers;
 
 namespace Enterprise_Front_End
 {
@@ -31,8 +32,10 @@ namespace Enterprise_Front_End
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new LayoutBase());
+            //NavigationService.Navigate(new LayoutBase());
+            ViewController.NavigateToPage(this, Enterprise_Front_End.Properties.ResourcePaths.AddLayoutBase, false);
             //Uri(ResourcePaths.FolderLayout + ResourcePaths.LayoutBase, UriKind.Relative))
+            
         }
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,18 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
         public static void NavigateToPage(dynamic viewObject, string pageLocation, Boolean isNetworkRequest)
         {
             // if needs network request run animation loading animation and run a request
-            
+
             // if successful network use viewObject to populate view
-
-
+            Type t = Type.GetType(pageLocation);
+            if (t == null)
+            {
+                throw new Exception("Type " + pageLocation + " not found.");
+            }
+            else
+            {
+                Object o = Activator.CreateInstance(t);
+                viewObject.NavigationService.Navigate(o);
+            }
         }
 
         public static void getDetailsView(dynamic viewObject)
