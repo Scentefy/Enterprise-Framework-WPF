@@ -7,10 +7,13 @@ namespace testHttpController.Controller
 {
     public class Networking
     {
-        private static string _apiEndPoint = "https://zz3az7p8rc.execute-api.us-east-1.amazonaws.com/prod";
+        public static Networking instance;
+
+        private static string _apiEndPoint = "https://5szoc7knb5.execute-api.us-east-1.amazonaws.com/prod/";
         public static string _responseString = "";
         public string testRequestBodyString = "{\"request\" : \"get_records\", \"table_name\" : \"USER_TABLE\", \"parameters\" : {}}";
-        public async Task<string> GetResponseString(Request request)
+
+        public static async Task<string> GetResponseString(Request request)
         {
             var httpClient = new HttpClient();
             // Create the RequestBody
