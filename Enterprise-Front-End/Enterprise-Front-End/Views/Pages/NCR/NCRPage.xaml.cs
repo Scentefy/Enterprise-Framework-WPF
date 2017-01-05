@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
 using System.Windows;
+using Enterprise_Front_End.Controllers.ViewControllers;
 
 namespace Enterprise_Front_End.Views.Pages.NCR
 {
@@ -47,6 +48,11 @@ namespace Enterprise_Front_End.Views.Pages.NCR
             data.Add(new Data() { Skew = 1, IssueTitle = "The yoghurt", ManufactureDate = new DateTime(1991, 9, 2), Status = "Approved" });
 
             ncrData.ItemsSource = data;
+        }
+
+        private void Add_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            ViewController.NavigateToPage(this, Enterprise_Front_End.Properties.ResourcePaths.PageNCRNew, false);
         }
 
     }

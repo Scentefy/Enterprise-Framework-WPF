@@ -165,4 +165,7 @@
   <data name="AddLayoutBase" xml:space="preserve">
     <value>Enterprise_Front_End.Views.Layouts.LayoutBase</value>
   </data>
+  <data name="PageNCRNew" xml:space="preserve">
+    <value>Enterprise_Front_End.Views.Pages.NCR.PageNCRNew</value>
+  </data>
 </root>

@@ -203,5 +203,14 @@ namespace Enterprise_Front_End.Properties {
                 return ResourceManager.GetString("PageNCR", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enterprise_Front_End.Views.Pages.NCR.PageNCRNew.
+        /// </summary>
+        public static string PageNCRNew {
+            get {
+                return ResourceManager.GetString("PageNCRNew", resourceCulture);
+            }
+        }
     }
 }
