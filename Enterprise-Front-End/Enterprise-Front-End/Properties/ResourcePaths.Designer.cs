@@ -61,6 +61,15 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enterprise_Front_End.Views.Layouts.LayoutBase.
+        /// </summary>
+        public static string AddLayoutBase {
+            get {
+                return ResourceManager.GetString("AddLayoutBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Controllers.
         /// </summary>
         public static string FolderController {
@@ -133,7 +142,7 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /LayoutBase.xaml.
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Layouts/LayoutBase.xaml.
         /// </summary>
         public static string LayoutBase {
             get {
