@@ -48,18 +48,18 @@ namespace testHttpController
             //parameters.Add("Email", "nigga");
             //parameters.Add("RoleID", "nigga");
 
-            Request r = new Request("get_records", parameters, "USER_TABLE");
+            Request r = new Request("get_records", parameters, "NCR_R_TABLE");
             Console.WriteLine("Printing out Request.....");
             Console.WriteLine(r.Jsonify());
 
             // Run a network test request
-            Networking n = new Controller.Networking();
+            
             Console.WriteLine("Running Network Request");
-            Networking.apiEndPoint = "https://x4nikw1tvc.execute-api.us-east-1.amazonaws.com/prod";
+            //Networking.apiEndPoint = "https://x4nikw1tvc.execute-api.us-east-1.amazonaws.com/prod";
             Task<string> result = null;
             try
             {
-                result =  n.GetResponseString(r);
+                result =  Networking.GetResponseString(r);
             }
             catch (Exception e)
             {
