@@ -187,7 +187,7 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /NCRPage.xaml.
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Pages/NCR/NCRPage.xaml.
         /// </summary>
         public static string PageNCR {
             get {

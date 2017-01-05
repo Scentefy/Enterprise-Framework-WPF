@@ -25,7 +25,7 @@
         <Frame x:Name="navigation_frame" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageNav}}" 
                Background="Green" Grid.Column="0"/>
 
-        <Frame x:Name="content_frame" Background="Red" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageLogin}}" Grid.Column="1" />
+        <Frame x:Name="content_frame" Background="Red" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageNCR}}" Grid.Column="1" />
 
 
 

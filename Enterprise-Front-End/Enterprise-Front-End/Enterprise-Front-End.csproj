@@ -100,6 +100,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Pages\NCR\NCRPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Pages\Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +126,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Pages\NCR\NCRPage.xaml.cs">
+      <DependentUpon>NCRPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Navigation;
 using System.Threading.Tasks;
 
 namespace Enterprise_Front_End.Controllers.ViewControllers
@@ -14,7 +15,8 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             // if needs network request run animation loading animation and run a request
             
             // if successful network use viewObject to populate view
-            
+
+
         }
 
         public static void getDetailsView(dynamic viewObject)
