@@ -6,10 +6,28 @@
       xmlns:local="clr-namespace:Enterprise_Front_End.Views.Pages.NCR"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="NCRPage">
+      Title="NCRPage" Width="1250" Height="700">
 
-    <Grid>
-        <Label x:Name="label" Content="NCR" HorizontalAlignment="Left" Margin="55,30,0,0" VerticalAlignment="Top" Width="156"/>
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="82*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="ncrData" Grid.Row="1" Margin="10" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Skew" Binding="{Binding Skew}" />
+                <DataGridTextColumn Header="Issue Title" Binding="{Binding IssueTitle}" />
+                <DataGridTextColumn Header="Manufacture Date" Binding="{Binding ManufactureDate}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Add" Content="Add" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="65" Height="20"/>
+        <Button x:Name="Remove" Content="Remove" HorizontalAlignment="Left" Margin="80,55,0,0" VerticalAlignment="Top" Width="65" Height="20"/>
+        <Button x:Name="Detail" Content="Detail" HorizontalAlignment="Left" Margin="150,55,0,0" VerticalAlignment="Top" Width="65" Height="20"/>
 
     </Grid>
 </Page>
