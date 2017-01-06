@@ -61,6 +61,7 @@
     </ApplicationDefinition>
     <Compile Include="Controllers\Networking.cs" />
     <Compile Include="Controllers\ViewControllers\ViewController.cs" />
+    <Compile Include="Models\NCRObject.cs" />
     <Compile Include="Models\Request.cs" />
     <Compile Include="Views\CircularProgressBar.xaml.cs">
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>

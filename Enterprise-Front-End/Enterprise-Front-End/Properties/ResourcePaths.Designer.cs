@@ -151,6 +151,15 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enterprise_Front_End.Models.NCRObject.
+        /// </summary>
+        public static string ObjectNCR {
+            get {
+                return ResourceManager.GetString("ObjectNCR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /DashboardPage.xaml.
         /// </summary>
         public static string PageDash {
@@ -210,6 +219,15 @@ namespace Enterprise_Front_End.Properties {
         public static string PageNCRNew {
             get {
                 return ResourceManager.GetString("PageNCRNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NCR_R_TABLE.
+        /// </summary>
+        public static string TableNCRR {
+            get {
+                return ResourceManager.GetString("TableNCRR", resourceCulture);
             }
         }
     }

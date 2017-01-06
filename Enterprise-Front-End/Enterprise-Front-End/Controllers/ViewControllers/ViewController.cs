@@ -72,7 +72,7 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             
         }
 
-        public static async void GetListView(dynamic viewObject, string tableName)
+        public static async void GetListView(dynamic viewObject, string tableName, string objectType)
         {
             // Create a network request
             var parameters = new OrderedDictionary();
@@ -84,7 +84,6 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             {
                 // Request back end for data
                 responseString = await Networking.GetResponseString(request);
-                
             }
             catch (Exception e)
             {
@@ -94,10 +93,11 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
 
             // Check if request is finished
 
+            // Prepare object list
 
-            // create list of objects
-
-            // set list in the viewObject
+            // Create list of objects
+            viewObject._dataList = null;
+            // Set list in the viewObject
 
         }
 

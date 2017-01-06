@@ -168,4 +168,10 @@
   <data name="PageNCRNew" xml:space="preserve">
     <value>Enterprise_Front_End.Views.Pages.NCR.PageNCRNew</value>
   </data>
+  <data name="ObjectNCR" xml:space="preserve">
+    <value>Enterprise_Front_End.Models.NCRObject</value>
+  </data>
+  <data name="TableNCRR" xml:space="preserve">
+    <value>NCR_R_TABLE</value>
+  </data>
 </root>

@@ -36,13 +36,6 @@ namespace Enterprise_Front_End
         {
             
             //NavigationService.Navigate(new LayoutBase());
-            Application.Current.Dispatcher.InvokeAsync(
-                new Action(() =>
-                {
-                    ViewController.GetListView(this, "NCR_R_TABLE");
-                }
-                ));
-                
             ViewController.NavigateToPage(this, Enterprise_Front_End.Properties.ResourcePaths.AddLayoutBase, false);
             //Uri(ResourcePaths.FolderLayout + ResourcePaths.LayoutBase, UriKind.Relative))
             
