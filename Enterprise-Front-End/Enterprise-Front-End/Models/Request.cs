@@ -8,7 +8,8 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using Enterprise_Front_End.Controllers;
 
-namespace testHttpController.Model
+
+namespace Enterprise_Front_End.Models
 {
     public class Request
     {
