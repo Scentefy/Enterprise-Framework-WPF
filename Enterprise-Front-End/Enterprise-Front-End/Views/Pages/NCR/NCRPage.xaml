@@ -21,7 +21,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Skew" Binding="{Binding Skew}" />
                 <DataGridTextColumn Header="Issue Title" Binding="{Binding IssueTitle}" />
-                <DataGridTextColumn Header="Manufacture Date" Binding="{Binding ManufactureDate}" />
+                <DataGridTextColumn Header="Manufacture Date" Binding="{Binding MnfctDate}" />
                 <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
             </DataGrid.Columns>
         </DataGrid>

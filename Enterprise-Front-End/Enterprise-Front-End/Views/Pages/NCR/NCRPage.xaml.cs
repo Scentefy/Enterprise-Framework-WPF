@@ -27,17 +27,18 @@ namespace Enterprise_Front_End.Views.Pages.NCR
     public partial class NCRPage : Page
     {
         // Data of NCR object type list for Data Grid
-        public List<NCRObject> _dataList;
+        public List<object> _dataList { get; set; }
 
         public NCRPage()
         {
             // Init Components and data
             InitializeComponent();
-            _dataList = new List<NCRObject>();
+            _dataList = null;
 
             // Async call to Set List data for data grid view
             Application.Current.Dispatcher.InvokeAsync(
-                new Action(() => { ViewController.GetListView(this, "NCR_R_TABLE", Enterprise_Front_End.Properties.ResourcePaths.AddNCRObject); }
+                new Action(() => { ViewController.GetListView(this, "NCR_R_TABLE", 
+                    Enterprise_Front_End.Properties.ResourcePaths.AddNCRObject); }
                     ));
 
 
@@ -69,16 +70,6 @@ namespace Enterprise_Front_End.Views.Pages.NCR
             ViewController.NavigateToPage(this, Enterprise_Front_End.Properties.ResourcePaths.AddPageNCRNew, false);
         }
 
+        
     }
-
-    //public class NCR
-    //{
-    //    public int Skew { get; set; }
-
-    //    public string IssueTitle { get; set; }
-
-    //    public DateTime ManufactureDate { get; set; }
-
-    //    public string Status { get; set; }
-    //}
 }
