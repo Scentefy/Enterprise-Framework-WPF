@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Enterprise_Front_End.Models;
 using System.Collections.Specialized;
+using Enterprise_Front_End.Properties;
 
 namespace Enterprise_Front_End.Controllers
 {
@@ -38,7 +39,8 @@ namespace Enterprise_Front_End.Controllers
             //parameters.Add("Email", "nigga");
             //parameters.Add("RoleID", "nigga");
 
-            Request r = new Request("login", parameters, "USER_TABLE");
+            Request r = new Request(ResourceRequestTypes.Login, parameters, 
+                ResourceTables.UserTable);
 
             return false;
         }

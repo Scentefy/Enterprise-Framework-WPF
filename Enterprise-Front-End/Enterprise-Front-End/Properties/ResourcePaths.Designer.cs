@@ -70,6 +70,24 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enterprise_Front_End.Models.NCRObject.
+        /// </summary>
+        public static string AddNCRObject {
+            get {
+                return ResourceManager.GetString("AddNCRObject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enterprise_Front_End.Views.Pages.NCR.PageNCRNew.
+        /// </summary>
+        public static string AddPageNCRNew {
+            get {
+                return ResourceManager.GetString("AddPageNCRNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Controllers.
         /// </summary>
         public static string FolderController {
@@ -151,15 +169,6 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enterprise_Front_End.Models.NCRObject.
-        /// </summary>
-        public static string ObjectNCR {
-            get {
-                return ResourceManager.GetString("ObjectNCR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to /DashboardPage.xaml.
         /// </summary>
         public static string PageDash {
@@ -210,15 +219,6 @@ namespace Enterprise_Front_End.Properties {
         public static string PageNCR {
             get {
                 return ResourceManager.GetString("PageNCR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enterprise_Front_End.Views.Pages.NCR.PageNCRNew.
-        /// </summary>
-        public static string PageNCRNew {
-            get {
-                return ResourceManager.GetString("PageNCRNew", resourceCulture);
             }
         }
         

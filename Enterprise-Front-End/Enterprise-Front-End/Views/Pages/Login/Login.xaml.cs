@@ -34,8 +34,17 @@ namespace Enterprise_Front_End
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            
+
             //NavigationService.Navigate(new LayoutBase());
+
+            
+            // TODO: link Networking layer to this WPF page
+            // call login request
+
+            // if success move to new page
+
+            // else present error message
+
             ViewController.NavigateToPage(this, Enterprise_Front_End.Properties.ResourcePaths.AddLayoutBase, false);
             //Uri(ResourcePaths.FolderLayout + ResourcePaths.LayoutBase, UriKind.Relative))
             

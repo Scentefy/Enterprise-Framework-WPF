@@ -11,20 +11,34 @@ namespace Enterprise_Front_End.Models
         // Constructor
         public NCRObject(string skew, string dateIssd, string cost, string mnfctYear, string dateMnfct, string dateBB)
         {
-            _skew = skew;
-            _dateIssd = dateIssd;
-            _cost = cost;
-            _mnfctYear = mnfctYear;
-            _dateMnfct = dateMnfct;
-            _dateBB = dateBB;
+            Skew = skew;
+            DateIssd = dateIssd;
+            Cost = cost;
+            MnfctYear = mnfctYear;
+            DateMnfct = dateMnfct;
+            DateBB = dateBB;
+            // TODO: Add all the NCR Attributes
+        }
+
+        // Default
+        public NCRObject()
+        {
+            Skew = "";
+            DateIssd = "";
+            Cost = "";
+            MnfctYear = "";
+            DateMnfct = "";
+            DateBB = "";
+            IssDescr = "";
         }
 
         // Properties
-        public string _skew { get; set; }
-        public string _dateIssd { get; set; }
-        public string _cost { get; set; }
-        public string _mnfctYear { get; set; }
-        public string _dateMnfct { get; set; }
-        public string _dateBB { get; set; }
+        public string Skew { get; set; }
+        public string DateIssd { get; set; }
+        public string Cost { get; set; }
+        public string MnfctYear { get; set; }
+        public string DateMnfct { get; set; }
+        public string DateBB { get; set; }
+        public string IssDescr { get; set; }
     }
 }

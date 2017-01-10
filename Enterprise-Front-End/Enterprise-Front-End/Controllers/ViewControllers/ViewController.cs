@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Enterprise_Front_End.Models;
 using Enterprise_Front_End.Controllers;
 using System.Collections.Specialized;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Enterprise_Front_End.Controllers.ViewControllers
 {
@@ -18,7 +20,7 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
     {
         // Singleton instance
         public static ViewController instance;
-
+                                           
         /// <summary>
         /// ViewObject 
         /// </summary>
@@ -72,7 +74,7 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             
         }
 
-        public static async void GetListView(dynamic viewObject, string tableName, string objectType)
+        public static async void GetListView(dynamic viewObject, string tableName, string objectAddress)
         {
             // Create a network request
             var parameters = new OrderedDictionary();
@@ -80,6 +82,7 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             Request request = new Request("get_records", parameters, tableName);
             // Store string value of response
             string responseString = null;
+
             try
             {
                 // Request back end for data
@@ -91,14 +94,10 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             }
             Console.WriteLine("Response : " + responseString);
 
-            // Check if request is finished
+            Utility.getObjectList(responseString, objectAddress);
 
-            // Prepare object list
-
-            // Create list of objects
-            viewObject._dataList = null;
-            // Set list in the viewObject
-
+            // Bind list to data grid
+            //viewObject.DataGridData.ItemsSource = viewObject._dataList;
         }
 
         public static void getConfirmationDialouge(dynamic viewObject)

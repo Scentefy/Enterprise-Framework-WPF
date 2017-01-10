@@ -37,10 +37,10 @@ namespace Enterprise_Front_End.Views.Pages.NCR
 
             // Async call to Set List data for data grid view
             Application.Current.Dispatcher.InvokeAsync(
-                new Action(() =>{ViewController.GetListView(this, ResourcePaths.TableNCRR, ResourcePaths.ObjectNCR);}
+                new Action(() => { ViewController.GetListView(this, "NCR_R_TABLE", Enterprise_Front_End.Properties.ResourcePaths.AddNCRObject); }
                     ));
 
-            
+
             //data.Add(new Data() { Skew = 1, IssueTitle = "Miguel", ManufactureDate = new DateTime(1971, 7, 23), Status = "Approved" });
             //data.Add(new Data() { Skew = 2, IssueTitle = "Fingered", ManufactureDate = new DateTime(1974, 1, 17), Status = "Approved" });
             //data.Add(new Data() { Skew = 5, IssueTitle = "The yoghurt", ManufactureDate = new DateTime(1991, 9, 2), Status = "Approved" });
@@ -66,7 +66,7 @@ namespace Enterprise_Front_End.Views.Pages.NCR
 
         private void Add_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            ViewController.NavigateToPage(this, Enterprise_Front_End.Properties.ResourcePaths.PageNCRNew, false);
+            ViewController.NavigateToPage(this, Enterprise_Front_End.Properties.ResourcePaths.AddPageNCRNew, false);
         }
 
     }

@@ -63,6 +63,16 @@
     <Compile Include="Controllers\ViewControllers\ViewController.cs" />
     <Compile Include="Models\NCRObject.cs" />
     <Compile Include="Models\Request.cs" />
+    <Compile Include="Properties\ResourceTables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceTables.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\ResourceRequestTypes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceRequestTypes.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\CircularProgressBar.xaml.cs">
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
     </Compile>
@@ -166,6 +176,14 @@
     <EmbeddedResource Include="Properties\ResourceStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourceStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ResourceTables.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceTables.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ResourceRequestTypes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceRequestTypes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

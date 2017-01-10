@@ -14,6 +14,7 @@ namespace Enterprise_Front_End.Models
     public class Request
     {
         // Class field variables
+        // TODO : Add getters and setters like the NCR object
         private string _requestType;
         private dynamic _parameters;
         private string _tableName;
