@@ -61,11 +61,47 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enterprise_Front_End.Views.Layouts.LayoutBase.
+        /// </summary>
+        public static string AddLayoutBase {
+            get {
+                return ResourceManager.GetString("AddLayoutBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enterprise_Front_End.Models.NCRObject.
+        /// </summary>
+        public static string AddNCRObject {
+            get {
+                return ResourceManager.GetString("AddNCRObject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enterprise_Front_End.Views.Pages.NCR.PageNCRNew.
+        /// </summary>
+        public static string AddPageNCRNew {
+            get {
+                return ResourceManager.GetString("AddPageNCRNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Controllers.
         /// </summary>
         public static string FolderController {
             get {
                 return ResourceManager.GetString("FolderController", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Views/Layouts.
+        /// </summary>
+        public static string FolderLayout {
+            get {
+                return ResourceManager.GetString("FolderLayout", resourceCulture);
             }
         }
         
@@ -124,6 +160,15 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Layouts/LayoutBase.xaml.
+        /// </summary>
+        public static string LayoutBase {
+            get {
+                return ResourceManager.GetString("LayoutBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /DashboardPage.xaml.
         /// </summary>
         public static string PageDash {
@@ -142,7 +187,7 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /Login.xaml.
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Pages/Login/Login.xaml.
         /// </summary>
         public static string PageLogin {
             get {
@@ -160,11 +205,29 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /NCRPage.xaml.
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Pages/Navigation/PageNav.xaml.
+        /// </summary>
+        public static string PageNav {
+            get {
+                return ResourceManager.GetString("PageNav", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Pages/NCR/NCRPage.xaml.
         /// </summary>
         public static string PageNCR {
             get {
                 return ResourceManager.GetString("PageNCR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NCR_R_TABLE.
+        /// </summary>
+        public static string TableNCRR {
+            get {
+                return ResourceManager.GetString("TableNCRR", resourceCulture);
             }
         }
     }

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\USER\Documents\GitHub\Enterprise-Frontend\frontEnd\frontEnd\obj\Debug\
+C:\Users\USER\Documents\GitHub\Enterprise-Framework-WPF\frontEnd\frontEnd\obj\Debug\
 frontEnd
 none
 false
 DEBUG;TRACE
-C:\Users\USER\Documents\GitHub\Enterprise-Frontend\frontEnd\frontEnd\App.xaml
+C:\Users\USER\Documents\GitHub\Enterprise-Framework-WPF\frontEnd\frontEnd\App.xaml
 6-279688265
 
 131995555914
-13709378725
+131471294900
 MainWindow.xaml;Pages\NCR.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;
 
 False

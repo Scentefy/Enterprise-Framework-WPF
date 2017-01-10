@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Enterprise_Front_End"
+      xmlns:view="clr-namespace:Enterprise_Front_End.Views"
       mc:Ignorable="d" 
       d:DesignHeight="480"
       HorizontalAlignment="Center"
@@ -23,6 +24,12 @@
     <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" 
                NavigateUri="http://www.msn.com">MSN</Hyperlink>
         </TextBlock>
-
+        <!--uncomment the bellow code for progressbar example-->
+        <!--<view:CircularProgressBar x:Name="progressBar"
+                             DockPanel.Dock="Left"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Top"
+                             Height="45"
+                             Margin="18,10" />-->
     </Grid>
 </Page>

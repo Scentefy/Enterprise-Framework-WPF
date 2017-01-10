@@ -15,7 +15,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Enterprise_Front_End.Properties;
-
+using Enterprise_Front_End.Views.Layouts;
+using Enterprise_Front_End.Controllers;
+using Enterprise_Front_End.Controllers.ViewControllers;
+using System.Windows.Threading;
 
 namespace Enterprise_Front_End
 {
@@ -27,13 +30,25 @@ namespace Enterprise_Front_End
         public Page3()
         {
             InitializeComponent();
-            login_label.Content = ResourceStrings.LoginPageHeader;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri(ResourcePaths.FolderView+ResourcePaths.PageDash, UriKind.Relative));
-            //this.Visibility = Visibility.Hidden;
+
+            //NavigationService.Navigate(new LayoutBase());
+
+            
+            // TODO: link Networking layer to this WPF page
+            // call login request
+
+            // if success move to new page
+
+            // else present error message
+
+            ViewController.NavigateToPage(this, Enterprise_Front_End.Properties.ResourcePaths.AddLayoutBase, false);
+            //Uri(ResourcePaths.FolderLayout + ResourcePaths.LayoutBase, UriKind.Relative))
+            
+
         }
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -55,5 +70,6 @@ namespace Enterprise_Front_End
         {
             System.Diagnostics.Process.Start("http://www.msn.com");
         }
+
     }
 }

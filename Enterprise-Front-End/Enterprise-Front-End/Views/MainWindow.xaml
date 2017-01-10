@@ -4,9 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Enterprise_Front_End"
+        xmlns:resx="clr-namespace:Enterprise_Front_End.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1200">
 
-        <Frame x:Name="content_frame" Source="Login.xaml" HorizontalAlignment="Center" HorizontalContentAlignment="Center" NavigationUIVisibility="Hidden"/>
+       
+
+
+    <Grid Margin="0,0,-3,0">
+        <Grid.ColumnDefinitions>
+            <!--Main Column-->
+            <ColumnDefinition Name="main_column" Width="100*">
+
+            </ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+            <Frame x:Name="content_frame" Source="{Binding Source={ x:Static resx:ResourcePaths.PageLogin}}" HorizontalContentAlignment="Center" NavigationUIVisibility="Hidden" Height="auto"  Width="auto"/>
+
+    </Grid>
+
 
 </Window>

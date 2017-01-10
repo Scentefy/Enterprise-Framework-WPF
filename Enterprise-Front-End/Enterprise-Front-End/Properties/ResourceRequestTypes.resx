@@ -117,61 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FolderController" xml:space="preserve">
-    <value>Controllers</value>
+  <data name="GetRecord" xml:space="preserve">
+    <value>getRecord</value>
   </data>
-  <data name="FolderLayout" xml:space="preserve">
-    <value>Views/Layouts</value>
+  <data name="GetRecords" xml:space="preserve">
+    <value>getRecords</value>
   </data>
-  <data name="FolderModel" xml:space="preserve">
-    <value>Models</value>
-  </data>
-  <data name="FolderView" xml:space="preserve">
-    <value>Views</value>
-  </data>
-  <data name="FrameNCRDetails" xml:space="preserve">
-    <value>/NCRDetailsFrame</value>
-  </data>
-  <data name="FrameNCRList" xml:space="preserve">
-    <value>/NCRListFrame</value>
-  </data>
-  <data name="FrameNCRNav" xml:space="preserve">
-    <value>/NCRNav</value>
-  </data>
-  <data name="FrameNCRSearchbar" xml:space="preserve">
-    <value>/NCRSearchbarFrame</value>
-  </data>
-  <data name="LayoutBase" xml:space="preserve">
-    <value>pack://application:,,,/Views/Layouts/LayoutBase.xaml</value>
-  </data>
-  <data name="PageDash" xml:space="preserve">
-    <value>/DashboardPage.xaml</value>
-  </data>
-  <data name="PageDashboard" xml:space="preserve">
-    <value>/DashboardPage</value>
-  </data>
-  <data name="PageLogin" xml:space="preserve">
-    <value>pack://application:,,,/Views/Pages/Login/Login.xaml</value>
-  </data>
-  <data name="PageMain" xml:space="preserve">
-    <value>/MainPage.xaml</value>
-  </data>
-  <data name="PageNav" xml:space="preserve">
-    <value>pack://application:,,,/Views/Pages/Navigation/PageNav.xaml</value>
-  </data>
-  <data name="PageNCR" xml:space="preserve">
-    <value>pack://application:,,,/Views/Pages/NCR/NCRPage.xaml</value>
-  </data>
-  <data name="AddLayoutBase" xml:space="preserve">
-    <value>Enterprise_Front_End.Views.Layouts.LayoutBase</value>
-  </data>
-  <data name="AddPageNCRNew" xml:space="preserve">
-    <value>Enterprise_Front_End.Views.Pages.NCR.PageNCRNew</value>
-  </data>
-  <data name="TableNCRR" xml:space="preserve">
-    <value>NCR_R_TABLE</value>
-  </data>
-  <data name="AddNCRObject" xml:space="preserve">
-    <value>Enterprise_Front_End.Models.NCRObject</value>
+  <data name="Login" xml:space="preserve">
+    <value>login</value>
   </data>
 </root>
