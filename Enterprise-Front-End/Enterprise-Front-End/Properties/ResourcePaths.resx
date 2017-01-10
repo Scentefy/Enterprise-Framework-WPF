@@ -174,4 +174,7 @@
   <data name="AddNCRObject" xml:space="preserve">
     <value>Enterprise_Front_End.Models.NCRObject</value>
   </data>
+  <data name="PageNCRNewForm" xml:space="preserve">
+    <value>pack://application:,,,/Views/Pages/NCR/NCRNewForm.xaml</value>
+  </data>
 </root>

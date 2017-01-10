@@ -223,6 +223,15 @@ namespace Enterprise_Front_End.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to pack://application:,,,/Views/Pages/NCR/NCRNewForm.xaml.
+        /// </summary>
+        public static string PageNCRNewForm {
+            get {
+                return ResourceManager.GetString("PageNCRNewForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to NCR_R_TABLE.
         /// </summary>
         public static string TableNCRR {

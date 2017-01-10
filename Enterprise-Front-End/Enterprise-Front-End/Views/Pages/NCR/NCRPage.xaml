@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Enterprise_Front_End.Views.Pages.NCR"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="NCRPage" Width="1250" Height="700">
+      Title="NCRPage" Width="864" Height="720">
 
     <Grid x:Name="grid">
         <Grid.ColumnDefinitions>
