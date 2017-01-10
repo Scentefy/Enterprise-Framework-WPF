@@ -10,6 +10,7 @@ using Enterprise_Front_End.Controllers;
 using System.Collections.Specialized;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections;
 
 namespace Enterprise_Front_End.Controllers.ViewControllers
 {
@@ -83,21 +84,31 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             // Store string value of response
             string responseString = null;
 
+            // Request back end for data
             try
             {
-                // Request back end for data
                 responseString = await Networking.GetResponseString(request);
             }
             catch (Exception e)
             {
                 Console.WriteLine("Getting list failed : " + e);
             }
+            // DEBUG printing out response from API
             Console.WriteLine("Response : " + responseString);
 
-            Utility.getObjectList(responseString, objectAddress);
+            // get the type of objects that need to be put into a list
+            Console.WriteLine("Getting type :: " + objectAddress);
+            Type objectType = Type.GetType(objectAddress);
+            if (objectType == null)
+            {
+                throw new Exception("type " + objectAddress + " not found.");
+            }
 
-            // Bind list to data grid
-            //viewObject.DataGridData.ItemsSource = viewObject._dataList;
+            // Bind list with recieved responseString to data grid
+            viewObject.DataGridData.ItemsSource =
+                Utility.GetObjectList(responseString, objectType);
+
+            
         }
 
         public static void getConfirmationDialouge(dynamic viewObject)

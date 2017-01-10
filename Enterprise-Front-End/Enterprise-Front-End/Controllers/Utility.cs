@@ -1,13 +1,11 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
 using System;
 using System.Reflection;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections;
 using Enterprise_Front_End.Models;
+using Newtonsoft.Json.Linq;
+using System.Windows.Documents;
+using System.Collections.Generic;
 
 namespace Enterprise_Front_End.Controllers
 {
@@ -16,66 +14,47 @@ namespace Enterprise_Front_End.Controllers
         // Singleton instance
         public static Utility instance;
 
-        public static IList getObjectList(string input, string objectType)
+        public static IList GetObjectList(string input, Type newObjectType)
         {
             // Parse json and put the data section into an object list
             dynamic inputJsonObject = JObject.Parse(input);
             JArray dataObjects = (JArray)inputJsonObject["data"];
 
-            Console.Write("printing properties : "+dataObjects[0]["ID"]);
+            // Get Object Properties to be mapped to the JArray Items Attributes
+            var objectProperties = Activator.CreateInstance(newObjectType)
+                .GetType().GetProperties();
 
+            // Create list with type extracted from the ObjectType String
+            Type listType = typeof(List<>).MakeGenericType(new[] { newObjectType });
+            IList objectList = (IList)Activator.CreateInstance(listType);
 
-            // get the type of objects that need to be put into a list
-            Console.WriteLine("Getting type :: " + objectType);
-            Type newObjectType = Type.GetType(objectType);
-            if (newObjectType == null)
+            //var objectList = new List<dynamic>();
+
+            // Loop through all the JObjects in the JArray
+            foreach (JObject jObject in dataObjects)
             {
-                throw new Exception("type " + objectType + " not found.");
+                // Create the new Object to be put into the list
+                Object listObject = Activator.CreateInstance(newObjectType);
+                foreach (var p in objectProperties)
+                {
+
+                    // If value exists in response body
+                    if (jObject.Property(p.Name) != null)
+                    {
+                        // Fill objects attributes
+                        PropertyInfo newObjectPropertyInf = newObjectType.GetProperty(p.Name);
+                        // Debug messages for properties of the JObject
+                        Console.WriteLine("Name of property : " + p.Name);
+                        Console.Write("printing properties : " + jObject[p.Name]["S"]);
+                        // Set Value
+                        newObjectPropertyInf.SetValue(listObject, Convert.ChangeType(jObject[p.Name]["S"],
+                            newObjectPropertyInf.PropertyType), null);
+                    }
+                }
+                // Add object to list
+                objectList.Add(listObject);
             }
-            Object n = Activator.CreateInstance(newObjectType);
-
-            //NCRObject n = new NCRObject();
-            var objectProperties = n.GetType().GetProperties();
-            
-            foreach (var p in objectProperties)
-            {
-                Console.WriteLine("Name of property : " + p.Name);
-                Console.Write("printing properties : " + dataObjects[0][p.Name]);
-            }
-
-
-
-
-
-
-
-
-            //// Get the attributes of the first object in the json object array
-            //Type jsonType = dataObjects[0].GetType();
-            //PropertyInfo[] attributes = jsonType.GetProperties();
-
-
-            //// Create list with type extracted from the ObjectType String
-            //Type listType = typeof(List<>).MakeGenericType(new[] { newObjectType });
-            //IList objectList = (IList)Activator.CreateInstance(listType);
-
-
-            //foreach (JObject jsonObj in dataObjects)
-            //{
-            //    // Create a new object each iteration
-            //    Object newObject = Activator.CreateInstance(newObjectType);
-            //    // TODO get each object
-            //    foreach (dynamic attribute in attributes)
-            //    {
-            //        // TODO extract attributes and put it in object
-            //        PropertyInfo newObjectPropertyInf = newObjectType.GetProperty(attribute.Name.ToString());
-            //        newObjectPropertyInf.SetValue(newObject, jsonObj, )
-            //    }
-            //}
-
-            //return objectList;
-
-            return null;
+            return objectList;
         }
 
     }
