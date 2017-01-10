@@ -16,11 +16,11 @@ namespace Enterprise_Front_End.Controllers
 
         public static IList GetObjectList(string input, Type newObjectType)
         {
-            // Parse json and put the data section into an object list
+            // Parse Json and put the data section into an Json object list
             dynamic inputJsonObject = JObject.Parse(input);
             JArray dataObjects = (JArray)inputJsonObject["data"];
 
-            // Get Object Properties to be mapped to the JArray Items Attributes
+            // Get List Object properties to be mapped to the JArray Items Attributes
             var objectProperties = Activator.CreateInstance(newObjectType)
                 .GetType().GetProperties();
 
@@ -28,26 +28,25 @@ namespace Enterprise_Front_End.Controllers
             Type listType = typeof(List<>).MakeGenericType(new[] { newObjectType });
             IList objectList = (IList)Activator.CreateInstance(listType);
 
-            //var objectList = new List<dynamic>();
-
             // Loop through all the JObjects in the JArray
             foreach (JObject jObject in dataObjects)
             {
                 // Create the new Object to be put into the list
                 Object listObject = Activator.CreateInstance(newObjectType);
-                foreach (var p in objectProperties)
+                // Loop through all the properties of the List object
+                foreach (var prop in objectProperties)
                 {
 
                     // If value exists in response body
-                    if (jObject.Property(p.Name) != null)
+                    if (jObject.Property(prop.Name) != null)
                     {
-                        // Fill objects attributes
-                        PropertyInfo newObjectPropertyInf = newObjectType.GetProperty(p.Name);
+
                         // Debug messages for properties of the JObject
-                        Console.WriteLine("Name of property : " + p.Name);
-                        Console.Write("printing properties : " + jObject[p.Name]["S"]);
-                        // Set Value
-                        newObjectPropertyInf.SetValue(listObject, Convert.ChangeType(jObject[p.Name]["S"],
+                        //Console.WriteLine("Name of property : " + p.Name);
+                        //Console.Write("printing properties : " + jObject[p.Name]["S"]);
+                        PropertyInfo newObjectPropertyInf = newObjectType.GetProperty(prop.Name);
+                        // Set Value of objects attributes
+                        newObjectPropertyInf.SetValue(listObject, Convert.ChangeType(jObject[prop.Name]["S"],
                             newObjectPropertyInf.PropertyType), null);
                     }
                 }
@@ -57,5 +56,22 @@ namespace Enterprise_Front_End.Controllers
             return objectList;
         }
 
+        /// <summary>
+        /// Utility function which returns a Type object using a string address of the Class
+        /// </summary>
+        /// <param name="objectLocation"></param>
+        /// <returns>Type object of the given Class address</returns>
+        public static Type GetObjectType(string objectLocation)
+        {
+            Type t = Type.GetType(objectLocation);
+            if (t == null)
+            {
+                throw new Exception("Type " + objectLocation + " not found.");
+            }
+            return t;
+        }
+
     }
+
+    
 }
