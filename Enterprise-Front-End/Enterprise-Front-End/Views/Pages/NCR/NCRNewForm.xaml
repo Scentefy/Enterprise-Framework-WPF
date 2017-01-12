@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-	Title="NCRNewForm" Width="864" Height="900">
+	Title="NCRNewForm" Width="864" Height="720">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -22,81 +22,38 @@
         <Label x:Name="TitleLabel" Content="Nonconformance Reporting" HorizontalAlignment="Left" Margin="80,10,0,0" VerticalAlignment="Top" Width="270" FontSize="20" Height="37"/>
 
         <Grid Grid.Row="2">
-            <ScrollViewer Width="590" VerticalScrollBarVisibility="Visible" Margin="0,10,0,610">
-                <StackPanel HorizontalAlignment="Left">
-                    <TextBlock Text="COMBOBOX" Margin="0,0,0,8" />
-                    <ComboBox Margin="0,0,0,8" HorizontalAlignment="Left" MinWidth="100">
-                        <ComboBoxItem Content="Item 1" />
-                        <ComboBoxItem Content="Item 2" />
-                        <ComboBoxItem Content="Item 3" />
-                        <ComboBoxItem Content="Item 4" />
-                        <ComboBoxItem Content="Item 5" />
-                    </ComboBox>
-                    <StackPanel Orientation="Horizontal">
-                        <ComboBox IsEditable="True" Margin="0,0,0,32" HorizontalAlignment="Left" MinWidth="100">
-                            <ComboBoxItem Content="Item 1" />
-                            <ComboBoxItem Content="Item 2" />
-                            <ComboBoxItem Content="Item 3" />
-                            <ComboBoxItem Content="Item 4" />
-                            <ComboBoxItem Content="Item 5" />
-                        </ComboBox>
-                        <TextBlock Text="(editable)" Margin="8,2,0,0" />
+            <ScrollViewer Width="590" VerticalScrollBarVisibility="Visible" Margin="0,10,0,0">
+                <StackPanel HorizontalAlignment="Center" Margin="0">
+                    <TextBox x:Name="issueTitleText" Text="Issue Title" Margin="0,0,0,38"></TextBox>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                        <Label Content="Best Before Date"></Label>
+                        <TextBox x:Name="bbDateTextBox" HorizontalAlignment="Left" Text="12/12/12" Margin="0" Width="85"/>
+                        <Label Content="Manufacture Date" Margin="10,0,0,0"></Label>
+                        <TextBox x:Name="ManufactureDateTextBox" HorizontalAlignment="Left" Text="12/12/12" Margin="25,0,0,1" SpellCheck.IsEnabled="True" Width="95"/>
                     </StackPanel>
-                    <TextBlock Text="CONTEXTMENU" Margin="0,0,0,8" />
-                    <Button Content="show context menu"  Margin="0,0,0,32" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                        <TextBox Text="Product Description" Width="164"></TextBox>
+                        <Label Content="Cost" Margin="64,0,0,0"></Label>
+                        <TextBox Text="$0.00" Width="186"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,15,0,0" HorizontalAlignment="Left">
+                    <ComboBox IsReadOnly="True" Width="138">
+                        <ComboBoxItem IsSelected="True">Criteria</ComboBoxItem>
+                        <ComboBoxItem>General</ComboBoxItem>
+                        <ComboBoxItem>Germ</ComboBoxItem>
+                        <ComboBoxItem>Machinery</ComboBoxItem>
+                    </ComboBox>
+                    </StackPanel>
+                    
+                    <TextBox Height="64" Margin="0,15,0,0" Text="Root Cause"></TextBox>
 
-                    <TextBlock Text="LISTBOX"  Margin="0,0,0,8"/>
-                    <ListBox Margin="0,0,0,32">
-                        <ListBoxItem Content="Item 1" />
-                        <ListBoxItem Content="Item 2" />
-                        <ListBoxItem Content="Item 3" />
-                        <ListBoxItem Content="Item 4" />
-                        <ListBoxItem Content="Item 5" />
-                    </ListBox>
-                    <TextBlock Text="LISTVIEW" Margin="0,0,0,8"/>
-                    <ListView Margin="0,0,0,16">
-                        <ListViewItem Content="Item 1" />
-                        <ListViewItem Content="Item 2" />
-                        <ListViewItem Content="Item 3" />
-                        <ListViewItem Content="Item 4" />
-                        <ListViewItem Content="Item 5" />
-                    </ListView>
-                    <ListView Margin="0,0,0,32">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Column 1" />
-                                <GridViewColumn Header="Column 2" />
-                                <GridViewColumn Header="Column 3" />
-                            </GridView>
-                        </ListView.View>
+                    <TextBox Height="161" Margin="0,15,0,0" Text="Issue Description"></TextBox>
 
-                        <ListViewItem Content="Item 1" />
-                        <ListViewItem Content="Item 2" />
-                        <ListViewItem Content="Item 3" />
-                        <ListViewItem Content="Item 4" />
-                        <ListViewItem Content="Item 5" />
-                    </ListView>
+                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                    <Button Content="Submit" Margin="344,0,13,0"></Button>
+                        <Button Content="Cancel" Margin="10,0,0,0"/>
+                    </StackPanel>
 
-                    <TextBlock Text="TREEVIEW" Margin="0,0,0,8"/>
-                    <TreeView>
-                        <TreeViewItem Header="Item 1">
-                            <TreeViewItem Header="Item 1.1" />
-                            <TreeViewItem Header="Item 1.2" />
-                            <TreeViewItem Header="Item 1.3" />
-                        </TreeViewItem>
-                        <TreeViewItem Header="Item 2">
-                            <TreeViewItem Header="Item 2.1" />
-                            <TreeViewItem Header="Item 2.2" />
-                            <TreeViewItem Header="Item 2.3" />
-                        </TreeViewItem>
-                        <TreeViewItem Header="Item 3">
-                            <TreeViewItem Header="Item 3.1" />
-                            <TreeViewItem Header="Item 3.2" />
-                            <TreeViewItem Header="Item 3.3" />
-                        </TreeViewItem>
-                        <TreeViewItem Header="Item 4" />
-                        <TreeViewItem Header="Item 5" />
-                    </TreeView>
                 </StackPanel>
             </ScrollViewer>
         </Grid>
