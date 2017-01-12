@@ -33,16 +33,10 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             // if needs network request run animation loading animation and run a request
 
             // if successful network use viewObject to populate view
-            Type t = Type.GetType(pageLocation);
-            if (t == null)
-            {
-                throw new Exception("Type " + pageLocation + " not found.");
-            }
-            else
-            {
-                Object o = Activator.CreateInstance(t);
-                viewObject.NavigationService.Navigate(o);
-            }
+            Type t = Utility.GetObjectType(pageLocation);
+            Object o = Activator.CreateInstance(t);
+            viewObject.NavigationService.Navigate(o);
+            
         }
 
         public static void GetDetailsView(dynamic viewObject)
@@ -77,14 +71,13 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
 
         public static async void GetListView(dynamic viewObject, string tableName, string objectAddress)
         {
-            // Create a network request
-            var parameters = new OrderedDictionary();
+
             // Create a request Object
+            var parameters = new OrderedDictionary();
             Request request = new Request("get_records", parameters, tableName);
-            // Store string value of response
             string responseString = null;
 
-            // Request back end for data
+            // Send Network Request for data
             try
             {
                 responseString = await Networking.GetResponseString(request);
@@ -93,22 +86,15 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
             {
                 Console.WriteLine("Getting list failed : " + e);
             }
-            // DEBUG printing out response from API
-            Console.WriteLine("Response : " + responseString);
+            //// DEBUG printing out response from API
+            //Console.WriteLine("Response : " + responseString);
 
             // get the type of objects that need to be put into a list
-            Console.WriteLine("Getting type :: " + objectAddress);
-            Type objectType = Type.GetType(objectAddress);
-            if (objectType == null)
-            {
-                throw new Exception("type " + objectAddress + " not found.");
-            }
+            Type objectType = Utility.GetObjectType(objectAddress);
 
             // Bind list with recieved responseString to data grid
             viewObject.DataGridData.ItemsSource =
                 Utility.GetObjectList(responseString, objectType);
-
-            
         }
 
         public static void getConfirmationDialouge(dynamic viewObject)
