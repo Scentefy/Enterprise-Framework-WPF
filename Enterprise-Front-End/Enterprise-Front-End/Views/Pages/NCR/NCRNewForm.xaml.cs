@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Enterprise_Front_End.Models;
 using System.Collections.Specialized;
+using Enterprise_Front_End.Controllers.ViewControllers;
 
 namespace Enterprise_Front_End.Views.Pages.NCR
 {
