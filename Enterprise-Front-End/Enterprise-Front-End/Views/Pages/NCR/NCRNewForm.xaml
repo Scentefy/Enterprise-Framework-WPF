@@ -16,10 +16,10 @@
             <ColumnDefinition Width="295*"/>
             <ColumnDefinition Width="137*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ReportButton" Content="Report" HorizontalAlignment="Left" Margin="80,55,0,0" VerticalAlignment="Top" Width="75" Height="20"/>
-        <Button x:Name="AnalysisButton" Content="Analysis" HorizontalAlignment="Left" Margin="175,55,0,0" VerticalAlignment="Top" Width="75" Height="20"/>
-        <Button x:Name="PrintButton" Content="Print" HorizontalAlignment="Left" Margin="275,55,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.467,0.5" Height="20"/>
-        <Label x:Name="TitleLabel" Content="Nonconformance Reporting" HorizontalAlignment="Left" Margin="80,10,0,0" VerticalAlignment="Top" Width="270" FontSize="20" Height="37"/>
+        <Button x:Name="ReportButton" Content="Report" HorizontalAlignment="Left" Margin="60,50,0,0" VerticalAlignment="Top" Width="75" Height="20"/>
+        <Button x:Name="AnalysisButton" Content="Analysis" HorizontalAlignment="Left" Margin="160,50,0,0" VerticalAlignment="Top" Width="75" Height="20"/>
+        <Button x:Name="PrintButton" Content="Print" HorizontalAlignment="Left" Margin="255,50,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.467,0.5" Height="20"/>
+        <Label x:Name="TitleLabel" Content="Nonconformance Reporting" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="270" FontSize="20" Height="37"/>
 
         <Grid Grid.Row="2">
             <ScrollViewer Width="590" VerticalScrollBarVisibility="Visible" Margin="0,10,0,0">
@@ -37,20 +37,20 @@
                         <TextBox Text="$0.00" Width="186"/>
                     </StackPanel>
                     <StackPanel Margin="0,15,0,0" HorizontalAlignment="Left">
-                    <ComboBox IsReadOnly="True" Width="138">
-                        <ComboBoxItem IsSelected="True">Criteria</ComboBoxItem>
-                        <ComboBoxItem>General</ComboBoxItem>
-                        <ComboBoxItem>Germ</ComboBoxItem>
-                        <ComboBoxItem>Machinery</ComboBoxItem>
-                    </ComboBox>
+                        <ComboBox IsReadOnly="True" Width="138">
+                            <ComboBoxItem IsSelected="True">Criteria</ComboBoxItem>
+                            <ComboBoxItem>General</ComboBoxItem>
+                            <ComboBoxItem>Germ</ComboBoxItem>
+                            <ComboBoxItem>Machinery</ComboBoxItem>
+                        </ComboBox>
                     </StackPanel>
-                    
-                    <TextBox Height="64" Margin="0,15,0,0" Text="Root Cause"></TextBox>
 
-                    <TextBox Height="161" Margin="0,15,0,0" Text="Issue Description"></TextBox>
+                    <TextBox Height="125" Margin="0,15,0,0" Text="Root Cause"></TextBox>
+
+                    <TextBox Height="241" Margin="0,15,0,0" Text="Issue Description"></TextBox>
 
                     <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                    <Button Content="Submit" Margin="344,0,13,0"></Button>
+                        <Button Content="Submit" Margin="344,0,13,0"/>
                         <Button Content="Cancel" Margin="10,0,0,0"/>
                     </StackPanel>
 

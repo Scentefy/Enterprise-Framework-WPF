@@ -7,7 +7,7 @@
       xmlns:resx="clr-namespace:Enterprise_Front_End.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="300"
-      Title="LayoutBase" Height="720" Width="1080">
+      Title="LayoutBase" Height="720" Width="1200">
 
     <Grid Margin="0,0,-3,0">
         <Grid.ColumnDefinitions>
@@ -23,9 +23,9 @@
         </Grid.ColumnDefinitions>
 
         <Frame x:Name="navigation_frame" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageNav}}" 
-               Background="Green" Grid.Column="0"/>
+                Grid.Column="0"/>
 
-        <Frame x:Name="content_frame" Background="Red" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageNCR}}" Grid.Column="1" />
+        <Frame x:Name="content_frame" NavigationUIVisibility="Hidden" Source="{Binding Source={ x:Static resx:ResourcePaths.PageNCR}}" Grid.Column="1" />
 
 
 
