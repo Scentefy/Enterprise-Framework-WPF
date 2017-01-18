@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Enterprise_Front_End.Models;
+using System.Collections.Specialized;
 
 namespace Enterprise_Front_End.Views.Pages.NCR
 {
@@ -25,6 +26,35 @@ namespace Enterprise_Front_End.Views.Pages.NCR
         public NCRNewForm()
         {
             InitializeComponent();
+
+            //try to add stuff into the database/backend
+
+            var parameters = new OrderedDictionary();
+            var skewOD = new OrderedDictionary();
+            skewOD.Add("S", "testAdd");
+            parameters.Add("Skew", skewOD);
+            var DateIssdOD = new OrderedDictionary();
+            DateIssdOD.Add("S", "2016-10-13");
+            parameters.Add("DateIssd", DateIssdOD);
+            var CostOD = new OrderedDictionary();
+            CostOD.Add("S", "$4.20");
+            parameters.Add("Cost", CostOD);
+            var MnfctYearOD = new OrderedDictionary();
+            MnfctYearOD.Add("S", "2016");
+            parameters.Add("MnfctYear", MnfctYearOD);
+            var DateMnfctOD = new OrderedDictionary();
+            DateMnfctOD.Add("S", "2016-12-19");
+            parameters.Add("DateMnfct", DateMnfctOD);
+            var DateBBOD = new OrderedDictionary();
+            DateBBOD.Add("S", "2016-12-19");
+            parameters.Add("DateBB", DateBBOD);
+
+
+            Application.Current.Dispatcher.InvokeAsync(
+                new Action(() => {
+                    ViewController.AddNCR(this, "NCR_R_TABLE", parameters);
+                }
+            ));
         }
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)

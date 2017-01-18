@@ -97,6 +97,27 @@ namespace Enterprise_Front_End.Controllers.ViewControllers
                 Utility.GetObjectList(responseString, objectType);
         }
 
+        public static async void AddNCR(dynamic viewObject, string tableName, dynamic parameters)
+        {
+            // Create a request Object
+            Request request = new Request("put_record", parameters, tableName);
+            // Store string value of response
+            string responseString = null;
+
+            // Request and sending data/parameters to back end for data
+            try
+            {
+                responseString = await Networking.GetResponseString(request);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to put record to server : " + e);
+            }
+            // DEBUG printing out response from API
+            Console.WriteLine("Response : " + responseString);
+
+        }
+
         public static void getConfirmationDialouge(dynamic viewObject)
         {
 

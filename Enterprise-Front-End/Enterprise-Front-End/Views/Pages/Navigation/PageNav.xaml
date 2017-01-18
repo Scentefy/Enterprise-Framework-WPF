@@ -19,19 +19,19 @@
                     <TranslateTransform X="-0.332"/>
                 </TransformGroup>
             </Button.RenderTransform>
-            <Button.Background>
-                <ImageBrush ImageSource="C:\Users\USER\Documents\GitHub\Enterprise-Framework-WPF\Enterprise-Front-End\Enterprise-Front-End\Images\naruto.png" Stretch="Fill" TileMode="None" />
-            </Button.Background>
+            
+                <Image Source="pack://siteoforigin:,,,/Images/naruto.png" Stretch="Fill" />
+            
         </Button>
 
-        <Image Source="C:\Users\USER\Documents\GitHub\Enterprise-Framework-WPF\Enterprise-Front-End\Enterprise-Front-End\Images\naruto.png" Stretch="None" Margin="151,348,122,300" />
+        <Image Source="pack://siteoforigin:,,,/Images/naruto.png" Stretch="None" Margin="151,348,122,300" />
 
         <Label x:Name="role" Content="System Admin" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,97,0,0" Height="28" Width="90"/>
         <Label x:Name="name" Content="Naruto Uzumaki" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="125" Margin="95,115,100,570" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="14"/>
 
         <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="270" Height="35" Margin="30,140,20,545" Background="Transparent">
             <StackPanel Orientation="Horizontal">
-                <Image Source="C:\Users\USER\Documents\GitHub\Enterprise-Framework-WPF\Enterprise-Front-End\Enterprise-Front-End\Images\naruto.png"/>
+                <Image Source="pack://siteoforigin:,,,/Images/naruto.png"/>
                 <TextBlock Height="13" Margin="0,0,174,0" Width="71" FontFamily="Segoe WP Semibold">NCR</TextBlock>
             </StackPanel>
         </Button>
