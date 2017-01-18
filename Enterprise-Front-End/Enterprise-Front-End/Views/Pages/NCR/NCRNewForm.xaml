@@ -24,30 +24,31 @@
         <Grid Grid.Row="2">
             <ScrollViewer Width="590" VerticalScrollBarVisibility="Visible" Margin="0,10,0,0">
                 <StackPanel HorizontalAlignment="Center" Margin="0">
-                    <TextBox x:Name="issueTitleText" Text="Issue Title" Margin="0,0,0,38"></TextBox>
+                    <TextBox x:Name="issueTitleText" Text="Issue Title" Margin="0,0,0,20" GotFocus="TextBox_GotFocus" > </TextBox>
+                    <TextBox x:Name="skewText" Text="Skew Number" Margin="0,0,0,20" GotFocus="TextBox_GotFocus" Width="183" HorizontalAlignment="Left" ></TextBox>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
-                        <Label Content="Best Before Date"></Label>
-                        <TextBox x:Name="bbDateTextBox" HorizontalAlignment="Left" Text="12/12/12" Margin="0" Width="85"/>
-                        <Label Content="Manufacture Date" Margin="10,0,0,0"></Label>
-                        <TextBox x:Name="ManufactureDateTextBox" HorizontalAlignment="Left" Text="12/12/12" Margin="25,0,0,1" SpellCheck.IsEnabled="True" Width="95"/>
+                        <Label Content="Best Before Date" Height="24"/>
+                        <DatePicker x:Name="bbDatePicker" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Height="30" Width="140"/>
+                        <Label Content="Manufacture Date" Margin="10,0,0,0" Height="24"/>
+                        <DatePicker x:Name="manfactDatePicker" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Height="30" Width="140"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                        <TextBox Text="Product Description" Width="164"></TextBox>
-                        <Label Content="Cost" Margin="64,0,0,0"></Label>
-                        <TextBox Text="$0.00" Width="186"/>
+                        <TextBox x:Name="pDescTextBox" Text="Product Description" Width="164" GotFocus="TextBox_GotFocus" ></TextBox>
+                        <Label Content="Cost" Margin="64,0,0,0" ></Label>
+                        <TextBox x:Name="costTextBox" Text="$0.00" Width="186" GotFocus="TextBox_GotFocus" />
                     </StackPanel>
                     <StackPanel Margin="0,15,0,0" HorizontalAlignment="Left">
-                        <ComboBox IsReadOnly="True" Width="138">
-                            <ComboBoxItem IsSelected="True">Criteria</ComboBoxItem>
-                            <ComboBoxItem>General</ComboBoxItem>
-                            <ComboBoxItem>Germ</ComboBoxItem>
-                            <ComboBoxItem>Machinery</ComboBoxItem>
+                        <ComboBox x:Name="critCombBox" IsReadOnly="True" Width="138">
+                            <ComboBoxItem x:Name="defaultCritText" IsSelected="True">Criteria</ComboBoxItem>
+                            <ComboBoxItem x:Name="generalCombBox">General</ComboBoxItem>
+                            <ComboBoxItem x:Name="germCombBox">Germ</ComboBoxItem>
+                            <ComboBoxItem x:Name="machCombBox">Machinery</ComboBoxItem>
                         </ComboBox>
                     </StackPanel>
 
-                    <TextBox Height="125" Margin="0,15,0,0" Text="Root Cause"></TextBox>
+                    <TextBox x:Name="rootTextBox" Height="125" Margin="0,15,0,0" Text="Root Cause" GotFocus="TextBox_GotFocus" ></TextBox>
 
-                    <TextBox Height="241" Margin="0,15,0,0" Text="Issue Description"></TextBox>
+                    <TextBox x:Name="issueDescTextBox" Height="241" Margin="0,15,0,0" Text="Issue Description" GotFocus="TextBox_GotFocus" ></TextBox>
 
                     <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
                         <Button Content="Submit" Margin="344,0,13,0"/>
